@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algorithm/Pseudocode | Simple Website</title>
+<style>
+
+  header{background:#4f46e5;color:#fff;padding:20px 24px;border-bottom:4px solid #818cf8}
+    .container{max-width:980px;margin:24px auto;padding:20px;background:black;border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.07)}
+
+
+body {
+  background: linear-gradient(135deg, #1f2937, #334155, #0f172a);
+  background-size: cover;
+  color: white;
+  line-height: 1.6;
+}
+
+
+header {
+  width: 100%;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+  z-index: 20;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #93c5fd;
+}
+
+.about-me-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+.about-me-top {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.about-me-top img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  object-fit: cover;
+}
+
+.personal-info {
+  background: rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  width: 320px;
+}
+
+.personal-info h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.section-content {
+  background: rgba(255,255,255,0.08);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.section-title {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #bfdbfe;
+}
+
+#works {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+#works h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.works {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.work {
+  background: rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.work:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.work h3 {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+}
+
+#contact {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+form {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 350px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+form h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+form button {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 10px;
+  border: none;
+  margin-top: 0.8rem;
+  background: #60a5fa;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #3b82f6;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Algorithm/Pseudocode | Simple Website</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">← Back to Home</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+  <main class="container">
+    <section>
+      <h2>Project Outline</h2>
+      <div class="grid">
+        <div>
+          <p>This simple site includes:
+            <ul>
+              <li>List of 10 algorithms with short descriptions</li>
+              <li>Pseudocode for each algorithm</li>
+              <li>Working Python code for: Array (basic ops), Stacks (infix→postfix, evaluate), Queues, Binary Tree (inorder, preorder, postorder)</li>
+            </ul>
+          </p>
+
+          <h2>10 Algorithms (short)</h2>
+          <ol>
+            <li>Linear Search</li>
+            <li>Binary Search</li>
+            <li>Bubble Sort</li>
+            <li>Selection Sort</li>
+            <li>Insertion Sort</li>
+            <li>Merge Sort</li>
+            <li>Quick Sort</li>
+            <li>Dijkstra (single-source shortest path)</li>
+            <li>Breadth-First Search (BFS)</li>
+            <li>Depth-First Search (DFS)</li>
+          </ol>
+
+          <h2>10 Pseudocode (one each)</h2>
+          <h3>1. Linear Search</h3>
+          <pre><code>FUNCTION linearSearch(A, key):
+  FOR i FROM 0 TO length(A)-1:
+    IF A[i] == key: RETURN i
+  RETURN -1
+</code></pre>
+
+          <h3>2. Binary Search (sorted A)</h3>
+          <pre><code>FUNCTION binarySearch(A, key):
+  low = 0; high = length(A)-1
+  WHILE low <= high:
+    mid = (low + high) // 2
+    IF A[mid] == key: RETURN mid
+    ELSE IF A[mid] < key: low = mid + 1
+    ELSE: high = mid - 1
+  RETURN -1
+</code></pre>
+
+          <h3>3. Bubble Sort</h3>
+          <pre><code>FUNCTION bubbleSort(A):
+  FOR i FROM 0 TO n-2:
+    FOR j FROM 0 TO n-2-i:
+      IF A[j] > A[j+1]: SWAP(A[j], A[j+1])
+</code></pre>
+
+          <h3>4. Selection Sort</h3>
+          <pre><code>FUNCTION selectionSort(A):
+  FOR i FROM 0 TO n-2:
+    minIdx = i
+    FOR j FROM i+1 TO n-1:
+      IF A[j] < A[minIdx]: minIdx = j
+    SWAP(A[i], A[minIdx])
+</code></pre>
+
+          <h3>5. Insertion Sort</h3>
+          <pre><code>FUNCTION insertionSort(A):
+  FOR i FROM 1 TO n-1:
+    key = A[i]
+    j = i - 1
+    WHILE j >= 0 AND A[j] > key:
+      A[j+1] = A[j]
+      j = j - 1
+    A[j+1] = key
+</code></pre>
+
+          <h3>6. Merge Sort</h3>
+          <pre><code>FUNCTION mergeSort(A):
+  IF length(A) <= 1: RETURN A
+  mid = length(A)//2
+  left = mergeSort(A[:mid])
+  right = mergeSort(A[mid:])
+  RETURN merge(left, right)
+</code></pre>
+
+          <h3>7. Quick Sort</h3>
+          <pre><code>FUNCTION quickSort(A, low, high):
+  IF low < high:
+    p = partition(A, low, high)
+    quickSort(A, low, p-1)
+    quickSort(A, p+1, high)
+</code></pre>
+
+          <h3>8. Dijkstra (sketch)</h3>
+          <pre><code>FUNCTION dijkstra(graph, src):
+  dist[] = INFINITY; dist[src]=0
+  PQ = priority queue with (src,0)
+  WHILE PQ not empty:
+    u = extract-min(PQ)
+    FOR each neighbor v of u:
+      alt = dist[u] + weight(u,v)
+      IF alt < dist[v]: dist[v]=alt; update PQ
+  RETURN dist
+</code></pre>
+
+          <h3>9. BFS</h3>
+          <pre><code>FUNCTION BFS(start):
+  create queue Q
+  mark start visited; enqueue(Q,start)
+  WHILE Q not empty:
+    u = dequeue(Q)
+    FOR each neighbor v of u:
+      IF not visited[v]: mark visited; enqueue(Q,v)
+</code></pre>
+
+          <h3>10. DFS (recursive)</h3>
+          <pre><code>FUNCTION DFS(u):
+  mark u visited
+  FOR each neighbor v of u:
+    IF not visited[v]: DFS(v)
+</code></pre>
+</body>
+</html>
